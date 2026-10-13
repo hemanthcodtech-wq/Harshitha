@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import {
   FiMapPin,
@@ -60,6 +61,32 @@ export default function ProjectsPage({ onOpenBooking }) {
     setSelectedIdx(newIdx)
     setSelectedMedia(filteredItems[newIdx])
   }
+
+  // Keyboard navigation & body scroll lock
+  useEffect(() => {
+    if (!selectedMedia) return
+    document.body.style.overflow = 'hidden'
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') closeLightbox()
+      if (e.key === 'ArrowLeft') {
+        const newIdx = selectedIdx === 0 ? filteredItems.length - 1 : selectedIdx - 1
+        setSelectedIdx(newIdx)
+        setSelectedMedia(filteredItems[newIdx])
+      }
+      if (e.key === 'ArrowRight') {
+        const newIdx = selectedIdx === filteredItems.length - 1 ? 0 : selectedIdx + 1
+        setSelectedIdx(newIdx)
+        setSelectedMedia(filteredItems[newIdx])
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [selectedMedia, selectedIdx, filteredItems])
 
   return (
     <div className="projects-page">
@@ -247,84 +274,86 @@ export default function ProjectsPage({ onOpenBooking }) {
         </div>
       </section>
 
-      {/* 4. Lightbox Fullscreen Modal */}
-      {selectedMedia && (
-        <div className="lightbox-backdrop" onClick={closeLightbox}>
-          <div className="lightbox-dialog" onClick={(e) => e.stopPropagation()}>
-            <button
-              type="button"
-              className="lightbox-close-btn"
-              onClick={closeLightbox}
-              aria-label="Close image popup"
-            >
-              <FiX size={22} />
-            </button>
+      {/* 4. Lightbox Fullscreen Modal with React Portal */}
+      {selectedMedia &&
+        createPortal(
+          <div className="lightbox-backdrop" onClick={closeLightbox}>
+            <div className="lightbox-dialog" onClick={(e) => e.stopPropagation()}>
+              <button
+                type="button"
+                className="lightbox-close-btn"
+                onClick={closeLightbox}
+                aria-label="Close image popup"
+              >
+                <FiX size={22} />
+              </button>
 
-            <button
-              type="button"
-              className="lightbox-nav-btn prev-btn"
-              onClick={handlePrev}
-              aria-label="Previous item"
-            >
-              <FiChevronLeft size={28} />
-            </button>
+              <button
+                type="button"
+                className="lightbox-nav-btn prev-btn"
+                onClick={handlePrev}
+                aria-label="Previous item"
+              >
+                <FiChevronLeft size={28} />
+              </button>
 
-            <button
-              type="button"
-              className="lightbox-nav-btn next-btn"
-              onClick={handleNext}
-              aria-label="Next item"
-            >
-              <FiChevronRight size={28} />
-            </button>
+              <button
+                type="button"
+                className="lightbox-nav-btn next-btn"
+                onClick={handleNext}
+                aria-label="Next item"
+              >
+                <FiChevronRight size={28} />
+              </button>
 
-            <div className="lightbox-media-container">
-              {selectedMedia.mediaType === 'video' ? (
-                <video
-                  src={selectedMedia.src}
-                  controls
-                  autoPlay
-                  playsInline
-                  className="lightbox-video-view"
-                />
-              ) : (
-                <img
-                  src={selectedMedia.src}
-                  alt={selectedMedia.title}
-                  className="lightbox-image-view"
-                />
-              )}
-            </div>
-
-            <div className="lightbox-info-bar">
-              <div className="lightbox-info-left">
-                <span className="lightbox-tag">{selectedMedia.tag}</span>
-                <h3>{selectedMedia.title}</h3>
-                <p>
-                  <FiMapPin size={14} style={{ marginRight: '5px' }} />
-                  {selectedMedia.location} • {selectedMedia.specs}
-                </p>
+              <div className="lightbox-media-container">
+                {selectedMedia.mediaType === 'video' ? (
+                  <video
+                    src={selectedMedia.src}
+                    controls
+                    autoPlay
+                    playsInline
+                    className="lightbox-video-view"
+                  />
+                ) : (
+                  <img
+                    src={selectedMedia.src}
+                    alt={selectedMedia.title}
+                    className="lightbox-image-view"
+                  />
+                )}
               </div>
 
-              <div className="lightbox-actions-right">
-                <button
-                  type="button"
-                  className="lightbox-book-btn"
-                  onClick={() => {
-                    closeLightbox()
-                    if (onOpenBooking) onOpenBooking()
-                  }}
-                >
-                  Book Free Site Measurement
-                </button>
-                <a href="tel:9900020960" className="lightbox-phone-btn">
-                  Call 9900020960
-                </a>
+              <div className="lightbox-info-bar">
+                <div className="lightbox-info-left">
+                  <span className="lightbox-tag">{selectedMedia.tag}</span>
+                  <h3>{selectedMedia.title}</h3>
+                  <p>
+                    <FiMapPin size={14} style={{ marginRight: '5px' }} />
+                    {selectedMedia.location} • {selectedMedia.specs}
+                  </p>
+                </div>
+
+                <div className="lightbox-actions-right">
+                  <button
+                    type="button"
+                    className="lightbox-book-btn"
+                    onClick={() => {
+                      closeLightbox()
+                      if (onOpenBooking) onOpenBooking()
+                    }}
+                  >
+                    Book Free Site Measurement
+                  </button>
+                  <a href="tel:9900020960" className="lightbox-phone-btn">
+                    Call 9900020960
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* 5. Consultation & Booking Ribbon */}
       <section className="projects-cta-ribbon">
