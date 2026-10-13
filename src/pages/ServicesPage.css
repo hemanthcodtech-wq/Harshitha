@@ -44,6 +44,12 @@
   color: #ffffff;
   letter-spacing: -0.8px;
   margin: 0 0 14px 0;
+  /* Stable height to prevent typewriter layout shift */
+  min-height: 1.4em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 6px;
 }
 
 .services-main-subtitle {

@@ -54,6 +54,12 @@
   margin: 0 0 10px 0;
   line-height: 1.2;
   animation: heroTextSlideUp 0.7s var(--ease-luxury, cubic-bezier(0.16, 1, 0.3, 1)) 0.08s both;
+  /* Stable height to prevent typewriter layout shift */
+  min-height: 1.4em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 6px;
 }
 
 .policy-hero-subtitle {

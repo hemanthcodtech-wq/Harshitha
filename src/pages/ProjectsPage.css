@@ -19,6 +19,8 @@
 
 .projects-hero-banner .page-hero-title {
   animation: heroTextSlideUp 0.7s var(--ease-luxury, cubic-bezier(0.16, 1, 0.3, 1)) 0.1s both;
+  line-height: 1.25;
+  display: block;
 }
 
 .projects-hero-banner .page-hero-subtitle {

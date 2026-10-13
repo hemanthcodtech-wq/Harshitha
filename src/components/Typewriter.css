@@ -2,14 +2,52 @@
   display: inline-flex;
   align-items: baseline;
   position: relative;
-  white-space: pre-wrap;
+  white-space: nowrap;
+  vertical-align: baseline;
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .typewriter-container {
+    white-space: normal;
+    word-break: break-word;
+  }
 }
 
 .typewriter-text {
   background: linear-gradient(135deg, #074c3e 0%, #0d7862 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   display: inline;
+  font-variant-numeric: tabular-nums;
+  line-height: inherit;
+  visibility: visible !important;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  font-weight: 300;
+  color: #074c3e;
+  opacity: 1;
+  animation: typewriterCursorBlink 0.9s steps(2, start) infinite;
+  transform: translateY(-1px);
+  line-height: inherit;
+  width: 0.4em;
+  height: 1.15em;
+  vertical-align: baseline;
+}
+
+.typewriter-cursor.cursor-finished {
+  animation: typewriterCursorBlink 0.9s steps(2, start) 3 forwards, fadeOutCursor 0.6s ease 3.2s forwards;
+}
+
+@keyframes fadeOutCursor {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 /* On dark backgrounds or custom themes */
@@ -30,16 +68,6 @@
   -webkit-background-clip: unset !important;
   -webkit-text-fill-color: #000000 !important;
   color: #000000 !important;
-}
-
-.typewriter-cursor {
-  display: inline-block;
-  margin-left: 2px;
-  font-weight: 300;
-  color: #074c3e;
-  opacity: 1;
-  animation: typewriterCursorBlink 0.9s steps(2, start) infinite;
-  transform: translateY(-1px);
 }
 
 .typewriter-light .typewriter-cursor {

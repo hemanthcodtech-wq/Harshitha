@@ -705,6 +705,8 @@ textarea:focus {
 
 .page-hero-section .page-hero-title {
   animation: heroTextSlideUp 0.65s var(--ease-luxury) 0.2s both;
+  line-height: 1.25;
+  display: block;
 }
 
 .page-hero-section .page-hero-subtitle {

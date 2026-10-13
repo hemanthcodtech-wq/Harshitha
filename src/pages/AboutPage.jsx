@@ -1,7 +1,19 @@
 import { Link } from 'react-router-dom'
-import { FiShield, FiTarget, FiEye, FiCheckCircle, FiPhoneCall, FiAward } from 'react-icons/fi'
-import { BsGem } from 'react-icons/bs'
-import { FaHardHat, FaHandshake, FaTools, FaCheckDouble } from 'react-icons/fa'
+import {
+  FiShield,
+  FiTarget,
+  FiEye,
+  FiCheckCircle,
+  FiPhoneCall,
+  FiAward,
+  FiFlag,
+  FiUsers,
+  FiTrendingUp,
+  FiCalendar,
+  FiArrowRight
+} from 'react-icons/fi'
+import { BsGem, BsCheckCircleFill } from 'react-icons/bs'
+import { FaHardHat, FaHandshake, FaTools, FaCheckDouble, FaBuilding } from 'react-icons/fa'
 import AnimatedCounter from '../components/AnimatedCounter'
 import Typewriter from '../components/Typewriter'
 import bannerImg from '../assets/banner.jpg'
@@ -51,11 +63,81 @@ export default function AboutPage({ onOpenBooking }) {
     },
   ]
 
+  // Enhanced 13-Year Journey Milestones
   const milestones = [
-    { year: '2013', title: 'Founded with a Vision', desc: 'Started in Chandigarh with a core mission to eliminate balcony accidents and pigeon infestations.' },
-    { year: '2016', title: 'Pioneered Invisible Grills', desc: 'Introduced 316-grade high-tensile stainless steel invisible grills for luxury apartments.' },
-    { year: '2020', title: '10,000+ Homes Milestone', desc: 'Expanded our operations across residential hubs with certified high-rise rigging teams.' },
-    { year: 'Today', title: '13+ Years of Leadership', desc: 'Over 15,000+ satisfied residential & commercial installations with zero safety failures.' },
+    {
+      year: '2013',
+      phase: 'Inception',
+      title: 'Founded With a Vision',
+      subtitle: 'The Safety Pioneer in Chandigarh',
+      desc: 'Launched in Chandigarh with a passionate rigging crew committed to eliminating high-rise balcony hazards and bird infestations without compromising building aesthetics or harming wildlife.',
+      badge: 'First Dedicated Crew',
+      metric: 'Chandigarh Tricity Launch',
+      icon: <FiFlag size={18} />,
+      accentColor: '#074c3e',
+      highlights: ['Safety-first protocol', 'High-altitude rigger training', 'Zero bird-harm deterrence']
+    },
+    {
+      year: '2015',
+      phase: 'Innovation',
+      title: 'Engineered Bird Net Systems',
+      subtitle: 'UV-Stabilized High-Density Copolymer',
+      desc: 'Introduced high-grade, UV-treated Garware polymer nets. These high-tensile, translucent barriers preserve sunlight, natural breezes, and panoramic views while creating an impenetrable, long-lasting pigeon deterrent.',
+      badge: '2,500+ Homes Secured',
+      metric: 'UV-Stabilized Durability',
+      icon: <FiShield size={18} />,
+      accentColor: '#0d7862',
+      highlights: ['Translucent optical clarity', 'Weather & monsoon endurance', 'Zero sag structural stability']
+    },
+    {
+      year: '2017',
+      phase: 'Breakthrough',
+      title: 'Pioneered SS-316 Invisible Grills',
+      subtitle: 'Modern High-Rise Balcony Safety',
+      desc: 'Brought authentic Marine-Grade SS-316 invisible grills to luxury apartments across Chandigarh, Mohali, and Panchkula. Featuring 2.5mm–3mm nylon-sheathed high-tensile steel cables tested to withstand 400kg+ impact loads.',
+      badge: '400kg+ Impact Certified',
+      metric: 'Marine Grade SS-316',
+      icon: <BsGem size={18} />,
+      accentColor: '#0284c7',
+      highlights: ['Unobstructed skyline views', 'Emergency egress cut capability', 'Corrosion-proof lifetime']
+    },
+    {
+      year: '2019',
+      phase: 'Expansion',
+      title: 'Industrial Ducts & Sports Box Netting',
+      subtitle: 'Commercial Towers, IT Parks & Sports Arenas',
+      desc: 'Scaled operations into commercial duct shaft bird-proofing for hospitals, corporate parks, and residential societies, alongside heavy-duty box cricket and sports perimeter nets for sports clubs and academies.',
+      badge: '150+ Commercial Ducts',
+      metric: 'Institutional Scale',
+      icon: <FaBuilding size={18} />,
+      accentColor: '#d97706',
+      highlights: ['High-rise industrial rigging', 'Custom turf perimeter nets', 'Anti-debris safety netting']
+    },
+    {
+      year: '2021',
+      phase: 'Scale & Utility',
+      title: '10,000+ Families & Smart Laundry Space',
+      subtitle: 'Comprehensive High-Rise Space Optimization',
+      desc: 'Crossed the 10,000 homes barrier with zero safety incidents. Expanded into smart ceiling clothes drying hangers (pulley systems & remote motorized hangers) to maximize compact modern balcony utility space.',
+      badge: '10,000+ Homes Landmark',
+      metric: 'Zero Safety Incidents',
+      icon: <FiUsers size={18} />,
+      accentColor: '#7c3aed',
+      highlights: ['Pulley & motorized hangers', 'Space-saving ceiling designs', 'Precision anchor mounting']
+    },
+    {
+      year: 'Present',
+      phase: 'Market Leader',
+      title: '13+ Years of Leadership & Excellence',
+      subtitle: 'Tricity’s #1 Most Recommended Safety Team',
+      desc: 'Today, Harshitha Enterprises protects over 15,000+ residences and commercial complexes across Chandigarh Tricity and neighboring regions. Backed by authentic SS-316 certification, 5-year written warranties, and top customer ratings.',
+      badge: '15,000+ Protected Homes',
+      metric: '100% Quality & 0 Failures',
+      icon: <FiAward size={18} />,
+      accentColor: '#074c3e',
+      isCurrent: true,
+      highlights: ['15,000+ satisfied clients', '5-Year written warranty', 'Free on-site inspection']
+    },
   ]
 
   return (
@@ -67,10 +149,9 @@ export default function AboutPage({ onOpenBooking }) {
           <h1 className="page-hero-title">
             Protecting Families,{' '}
             <Typewriter
-              words={['Securing Spaces', 'Preventing Hazards', '13+ Years of Trust', 'Pioneering Safety']}
-              typingSpeed={70}
-              deletingSpeed={40}
-              pauseDuration={2200}
+              text="Securing Spaces"
+              loop={false}
+              typingSpeed={65}
             />
           </h1>
           <p className="page-hero-subtitle">
@@ -221,22 +302,133 @@ export default function AboutPage({ onOpenBooking }) {
         </div>
       </section>
 
-      {/* 7. Timeline Milestones */}
-      <section className="timeline-section">
+      {/* 7. Timeline Milestones - Enhanced Journey Section */}
+      <section className="timeline-section" id="journey">
         <div className="container">
           <div className="section-header-center">
-            <span className="section-pill">Our Journey</span>
-            <h2 className="section-title">13 Years of Growth & Innovation</h2>
+            <span className="section-pill">
+              <FiCalendar style={{ marginRight: '6px' }} /> Our Journey Since 2013
+            </span>
+            <h2 className="section-title">13 Years of Engineering, Growth & Trust</h2>
+            <p className="section-desc">
+              From our humble beginnings in Chandigarh with a single rigger van to safeguarding over 15,000+ homes across North India — explore how we built the region’s premier architectural safety enterprise.
+            </p>
           </div>
 
-          <div className="timeline-grid reveal-stagger">
-            {milestones.map((m, idx) => (
-              <div key={idx} className="timeline-card">
-                <div className="timeline-year">{m.year}</div>
-                <h3>{m.title}</h3>
-                <p>{m.desc}</p>
+          {/* Quick Journey Highlights Strip */}
+          <div className="journey-summary-strip reveal-stagger">
+            <div className="journey-stat-card">
+              <span className="journey-stat-num">2013</span>
+              <span className="journey-stat-label">Inception in Chandigarh</span>
+            </div>
+            <div className="journey-stat-card">
+              <span className="journey-stat-num">15,000+</span>
+              <span className="journey-stat-label">Homes Protected</span>
+            </div>
+            <div className="journey-stat-card">
+              <span className="journey-stat-num">400kg+</span>
+              <span className="journey-stat-label">Tensile Load Tested</span>
+            </div>
+            <div className="journey-stat-card highlight">
+              <span className="journey-stat-num">0 Failures</span>
+              <span className="journey-stat-label">100% Safety Record</span>
+            </div>
+          </div>
+
+          {/* Timeline Interactive Roadmap */}
+          <div className="timeline-container reveal-stagger">
+            <div className="timeline-center-line">
+              <div className="timeline-line-glow"></div>
+            </div>
+
+            {milestones.map((m, idx) => {
+              const isEven = idx % 2 === 0
+              return (
+                <div
+                  key={idx}
+                  className={`timeline-row ${isEven ? 'year-left' : 'year-right'} ${m.isCurrent ? 'highlight' : ''}`}
+                >
+                  {/* Left Column (Desktop) */}
+                  <div className="timeline-side timeline-year-side">
+                    <div className="timeline-badge-group">
+                      <span className="timeline-phase-pill">{m.phase}</span>
+                      <div className="timeline-year-badge">
+                        <span>{m.year}</span>
+                        {m.isCurrent && <span className="timeline-current-pulse" />}
+                      </div>
+                      <span className="timeline-year-subtitle">{m.metric}</span>
+                    </div>
+                  </div>
+
+                  {/* Center Node Indicator with Icon */}
+                  <div className="timeline-center-dot">
+                    <div className="dot-icon-inner">{m.icon}</div>
+                    <div className="dot-ripple-ring"></div>
+                  </div>
+
+                  {/* Right Column (Desktop) */}
+                  <div className="timeline-side timeline-content-side">
+                    <div className="timeline-content-card">
+                      <div className="timeline-card-header">
+                        <div className="timeline-card-title-wrap">
+                          <span className="timeline-mobile-phase">{m.phase} • {m.year}</span>
+                          <h3 className="timeline-card-title">{m.title}</h3>
+                          <span className="timeline-card-subtitle">{m.subtitle}</span>
+                        </div>
+                        <div className="timeline-card-icon-bubble" style={{ color: m.accentColor }}>
+                          {m.icon}
+                        </div>
+                      </div>
+
+                      <p className="timeline-card-desc">{m.desc}</p>
+
+                      {/* Highlights Pill List */}
+                      {m.highlights && m.highlights.length > 0 && (
+                        <div className="timeline-highlights-list">
+                          {m.highlights.map((h, hIdx) => (
+                            <span key={hIdx} className="timeline-highlight-chip">
+                              <FiCheckCircle className="chip-check-icon" /> {h}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+
+                      {/* Bottom Milestone Footer Ribbon */}
+                      <div className="timeline-card-footer">
+                        <span className="timeline-achievement-badge">
+                          <BsGem className="achievement-icon" /> {m.badge}
+                        </span>
+                        {m.isCurrent && (
+                          <span className="timeline-live-status">
+                            <span className="live-status-dot"></span> Active Standard
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+
+          {/* Bottom Journey Callout Card */}
+          <div className="journey-bottom-card reveal-up">
+            <div className="journey-bottom-content">
+              <div className="journey-bottom-badge">
+                <FiAward size={18} /> 13 Years of Proven Safety
               </div>
-            ))}
+              <h3>Looking for Expert Installation for Your Home or Complex?</h3>
+              <p>Experience the precision, marine-grade materials, and trained riggers that 15,000+ homeowners trust.</p>
+            </div>
+            <div className="journey-bottom-actions">
+              <button
+                type="button"
+                className="journey-cta-btn"
+                onClick={() => onOpenBooking ? onOpenBooking() : null}
+              >
+                Schedule Free Site Inspection <FiArrowRight style={{ marginLeft: '6px' }} />
+              </button>
+            </div>
           </div>
         </div>
       </section>

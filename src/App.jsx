@@ -21,7 +21,11 @@ import './App.css'
 
 function AppContent() {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false)
-  const [showSplash, setShowSplash] = useState(true)
+  const [showSplash, setShowSplash] = useState(() => {
+    // Only show splash on first visit
+    const hasVisited = localStorage.getItem('harshitha_splash_shown')
+    return !hasVisited
+  })
   const location = useLocation()
   const prevPathRef = useRef(location.pathname)
   const isSplash = location.pathname === '/splash'
@@ -47,11 +51,16 @@ function AppContent() {
     return () => clearTimeout(timer)
   }, [location.pathname])
 
+  const handleSplashFinish = () => {
+    localStorage.setItem('harshitha_splash_shown', 'true')
+    setShowSplash(false)
+  }
+
   return (
     <div className="app-layout">
-      {/* Initial Website Launch Splash Screen */}
+      {/* Initial Website Launch Splash Screen - Only on first visit */}
       {showSplash && !isSplash && (
-        <SplashScreen onFinish={() => setShowSplash(false)} />
+        <SplashScreen onFinish={handleSplashFinish} />
       )}
 
       {/* Luxury Custom Desktop Cursor */}

@@ -50,16 +50,24 @@ export default function ServiceDetailsPage({ onOpenBooking }) {
 
           <div className="service-hero-grid">
             <div className="service-hero-content reveal-left">
-              <span className="service-category-badge">
-                <FiShield style={{ marginRight: '6px' }} />
-                {service.categoryBadge} •{' '}
-                <Typewriter
-                  words={['Expert Craftsmanship', '5-Year Warranty', 'Marine Grade SS-316', 'Free Site Inspection']}
-                  typingSpeed={70}
-                  deletingSpeed={40}
-                  pauseDuration={2200}
-                />
-              </span>
+              <div className="service-hero-badges-group">
+                <span className="service-category-badge">
+                  <FiShield className="badge-shield-icon" />
+                  <span>{service.categoryBadge}</span>
+                </span>
+                <span className="service-trust-pill">
+                  <span className="badge-status-dot" />
+                  <Typewriter
+                    text={
+                      service.id === 'invisible-grills'
+                        ? 'Marine SS-316 • 5-Yr Warranty'
+                        : 'Certified Quality • 5-Yr Warranty'
+                    }
+                    loop={false}
+                    typingSpeed={50}
+                  />
+                </span>
+              </div>
 
               <h1 className="service-hero-title">{service.title}</h1>
 

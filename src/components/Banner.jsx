@@ -41,17 +41,9 @@ export default function Banner({ onOpenBooking, onExploreServices }) {
               <h1 className="banner-headline">
                 Complete Net Solutions<br />
                 <Typewriter
-                  words={[
-                    'For A Safer Tomorrow',
-                    'For Balconies & Windows',
-                    'For High-Rise Living',
-                    'For Children & Pets',
-                    'For Pigeon Free Homes',
-                    'For Sports & Construction'
-                  ]}
-                  typingSpeed={70}
-                  deletingSpeed={40}
-                  pauseDuration={2200}
+                  text="For Pigeon Free Homes & Balcony Safety"
+                  loop={false}
+                  typingSpeed={65}
                   className="typewriter-black banner-typewriter"
                 />
               </h1>

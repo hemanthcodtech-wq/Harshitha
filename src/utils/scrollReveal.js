@@ -19,7 +19,7 @@ const ANIMATION_MAP = {
   '.services-hero-banner': 'reveal-down',
   '.projects-hero-banner': 'reveal-down',
   '.policy-hero-section': 'reveal-down',
-  '.timeline-card': 'reveal-flip',
+  '.timeline-container': 'reveal-up',
   '.timeline-item': 'reveal-flip',
   '.value-item-card': 'reveal-zoom',
   '.trust-strip-card': 'reveal-zoom',

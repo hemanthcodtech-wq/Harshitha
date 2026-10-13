@@ -89,10 +89,9 @@ export default function BookPage() {
           <h1 className="page-hero-title">
             Book a Free{' '}
             <Typewriter
-              words={['Site Inspection', 'Laser Measurement', 'SS-316 Sample Demo', 'Written Quotation']}
-              typingSpeed={75}
-              deletingSpeed={45}
-              pauseDuration={2000}
+              text="Site Inspection"
+              loop={false}
+              typingSpeed={65}
             />
           </h1>
           <p className="page-hero-subtitle">

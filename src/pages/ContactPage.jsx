@@ -116,10 +116,9 @@ export default function ContactPage() {
           <h1 className="page-hero-title">
             Contact Our{' '}
             <Typewriter
-              words={['Safety Experts', 'Installation Team', 'Balcony Specialists', 'Engineering Team']}
-              typingSpeed={75}
-              deletingSpeed={45}
-              pauseDuration={2000}
+              text="Safety Experts"
+              loop={false}
+              typingSpeed={65}
             />
           </h1>
           <p className="page-hero-subtitle">

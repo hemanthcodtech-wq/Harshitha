@@ -24,11 +24,10 @@ export default function ServicesPage({ onOpenBooking }) {
           <h1 className="services-main-title">
             Our{' '}
             <Typewriter
-              words={['Services', 'Safety Nets', 'Invisible Grills', 'Sports Enclosures', 'Bird Proofing']}
-              typingSpeed={75}
-              deletingSpeed={45}
-              pauseDuration={2000}
+              text="Services & Solutions"
+              loop={false}
               className="typewriter-gold"
+              typingSpeed={65}
             />
           </h1>
           <p className="services-main-subtitle">

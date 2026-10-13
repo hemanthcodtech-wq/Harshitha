@@ -69,10 +69,9 @@ export default function ProjectsPage({ onOpenBooking }) {
           <h1 className="page-hero-title">
             Recent Projects &{' '}
             <Typewriter
-              words={['Site Gallery', 'Invisible Grills', 'Pigeon Proofing', 'Balcony Safety', 'Verified Installations']}
-              typingSpeed={75}
-              deletingSpeed={45}
-              pauseDuration={2000}
+              text="Site Gallery"
+              loop={false}
+              typingSpeed={65}
             />
           </h1>
           <p className="page-hero-subtitle">

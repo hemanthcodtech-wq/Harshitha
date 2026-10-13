@@ -56,10 +56,9 @@ export default function PolicyPage({ defaultSlug }) {
           <div className="policy-hero-badge">
             Official Legal Document •{' '}
             <Typewriter
-              words={['Verified 2026', 'Customer Protection', 'Standard Compliance']}
-              typingSpeed={75}
-              deletingSpeed={45}
-              pauseDuration={2000}
+              text="Verified Customer Protection Standards"
+              loop={false}
+              typingSpeed={60}
             />
           </div>
           <h1 className="policy-hero-title">{policy.title}</h1>
