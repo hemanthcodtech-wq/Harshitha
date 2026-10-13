@@ -88,9 +88,29 @@ export default function ServicesPage({ onOpenBooking }) {
                       <p className="service-card-desc">{service.shortDesc}</p>
                     </div>
 
-                    {/* Circular Arrow Button (matching reference) */}
+                    {/* Action Buttons: Call, WhatsApp & Details Arrow */}
                     <div className="service-card-action">
-                      <span className="card-arrow-circle" aria-label={`View details for ${service.shortTitle}`}>
+                      <a
+                        href="tel:9900020960"
+                        className="service-action-btn service-call-btn"
+                        onClick={(e) => e.stopPropagation()}
+                        aria-label={`Call directly for ${service.shortTitle}`}
+                        title="Call directly"
+                      >
+                        <FiPhoneCall size={16} />
+                      </a>
+                      <a
+                        href={`https://wa.me/919900020960?text=${encodeURIComponent(`Hello Harshitha Enterprises, I would like to inquire about ${service.shortTitle}.`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="service-action-btn service-wa-btn"
+                        onClick={(e) => e.stopPropagation()}
+                        aria-label={`Chat on WhatsApp about ${service.shortTitle}`}
+                        title="Chat on WhatsApp"
+                      >
+                        <BsWhatsapp size={16} />
+                      </a>
+                      <span className="card-arrow-circle" aria-label={`View details for ${service.shortTitle}`} title="View Details">
                         <FiArrowRight size={18} />
                       </span>
                     </div>

@@ -15,6 +15,7 @@ import PolicyPage from './pages/PolicyPage'
 import SplashScreen from './components/SplashScreen'
 import SplashPage from './pages/SplashPage'
 import BackToTopButton from './components/BackToTopButton'
+import WhatsAppFloat from './components/WhatsAppFloat'
 import CustomCursor from './components/CustomCursor'
 import { initScrollReveal } from './utils/scrollReveal'
 import './App.css'
@@ -125,6 +126,9 @@ function AppContent() {
           </span>
         </div>
       )}
+
+      {/* WhatsApp Floating Action Button */}
+      {!isSplash && <WhatsAppFloat />}
 
       {/* Luxury Circular Progress Floating Back To Top Button */}
       {!isSplash && <BackToTopButton />}

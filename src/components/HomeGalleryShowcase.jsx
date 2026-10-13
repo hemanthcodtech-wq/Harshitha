@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { FiArrowRight, FiMapPin, FiCheckCircle } from 'react-icons/fi'
 import g2_1 from '../2/WhatsApp Image 2026-10-13 at 11.14.59 AM.jpeg'
 import g2_2 from '../2/WhatsApp Image 2026-10-13 at 11.15.01 AM.jpeg'
-import g2_3 from '../2/WhatsApp Image 2026-10-13 at 11.16.28 AM.jpeg'
+import g2_3 from '../2/image.png'
 import g2_4 from '../2/WhatsApp Image 2026-10-13 at 11.16.36 AM.jpeg'
 import './HomeGalleryShowcase.css'
 

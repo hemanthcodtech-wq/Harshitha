@@ -3,6 +3,7 @@ import pigeonImg from '../assets/pigeon_net.jpg'
 import sportsImg from '../assets/sports_net.jpg'
 import childImg from '../assets/child_safety_after.jpg'
 import ductImg from '../assets/duct_after.jpg'
+import clothHangerImg from '../2/image.png'
 
 export const servicesData = [
   {
@@ -328,7 +329,7 @@ export const servicesData = [
     title: 'Premium Stainless Steel Cloth Hangers & Smart Dryers',
     categoryBadge: 'Smart Drying Solutions',
     category: 'residential',
-    image: bannerImg,
+    image: clothHangerImg,
     shortDesc: 'Ceiling and wall-mounted space-saving cloth hangers with smart pulley systems.',
     overview:
       "Maximize your balcony utility area with Harshitha's ceiling and wall-mounted space-saving cloth hangers. These configurations allow you to dry clothes in an organized manner by pulling the hanger up to ceiling height, utilizing high-level warm air currents for speedier drying and keeping your floor space clear.",

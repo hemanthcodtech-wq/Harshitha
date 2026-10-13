@@ -231,14 +231,61 @@
   margin: 0;
 }
 
-/* Circular Arrow Button in Bottom Right */
+/* Action Buttons in Bottom Right: Call, WhatsApp & Circular Arrow */
 .service-card-action {
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.service-action-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 2;
+}
+
+/* Call Button */
+.service-call-btn {
+  background: #f0fdf4;
+  border: 1.5px solid #86efac;
+  color: #15803d;
+}
+
+.service-call-btn:hover {
+  background: #15803d;
+  border-color: #15803d;
+  color: #ffffff;
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 6px 14px rgba(21, 128, 61, 0.35);
+}
+
+/* WhatsApp Button */
+.service-wa-btn {
+  background: #ecfdf5;
+  border: 1.5px solid #6ee7b7;
+  color: #059669;
+}
+
+.service-wa-btn:hover {
+  background: #25D366;
+  border-color: #25D366;
+  color: #ffffff;
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 6px 14px rgba(37, 211, 102, 0.4);
 }
 
 .card-arrow-circle {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: #ffffff;
   border: 1.5px solid #cbd5e1;
@@ -254,7 +301,7 @@
   background: #074c3e;
   border-color: #074c3e;
   color: #ffffff;
-  transform: translateX(3px);
+  transform: translateX(2px);
   box-shadow: 0 4px 12px rgba(7, 76, 62, 0.3);
 }
 

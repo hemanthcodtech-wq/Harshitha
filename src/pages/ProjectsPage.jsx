@@ -25,6 +25,7 @@ export default function ProjectsPage({ onOpenBooking }) {
     { id: 'all', label: 'All Projects' },
     { id: 'real', label: 'Real Site Photos' },
     { id: 'Invisible Grills', label: 'Invisible Grills' },
+    { id: 'Cloth Dryers', label: 'Cloth Hangers' },
     { id: 'Bird Nets', label: 'Bird & Pigeon Nets' },
     { id: 'Child Safety', label: 'Child Safety' },
     { id: 'ai', label: 'Architectural Renders' },

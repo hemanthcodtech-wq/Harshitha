@@ -6,7 +6,7 @@ import g1_3 from '../1/WhatsApp Image 2026-10-13 at 11.18.48 AM.jpeg'
 // Images & Video from src/2
 import g2_1 from '../2/WhatsApp Image 2026-10-13 at 11.14.59 AM.jpeg'
 import g2_2 from '../2/WhatsApp Image 2026-10-13 at 11.15.01 AM.jpeg'
-import g2_3 from '../2/WhatsApp Image 2026-10-13 at 11.16.28 AM.jpeg'
+import g2_3 from '../2/image.png'
 import g2_4 from '../2/WhatsApp Image 2026-10-13 at 11.16.36 AM.jpeg'
 import g2_5 from '../2/WhatsApp Image 2026-10-13 at 11.16.39 AM.jpeg'
 import g2_6 from '../2/WhatsApp Image 2026-10-13 at 11.16.42 AM.jpeg'

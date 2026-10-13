@@ -6,7 +6,7 @@ import pigeonImg from '../assets/pigeon_net.jpg'
 import sportsImg from '../assets/sports_net.jpg'
 import childImg from '../assets/child_safety_after.jpg'
 import ductImg from '../assets/duct_after.jpg'
-import g2_3 from '../2/WhatsApp Image 2026-10-13 at 11.16.28 AM.jpeg'
+import g2_3 from '../2/image.png'
 import g2_4 from '../2/WhatsApp Image 2026-10-13 at 11.16.36 AM.jpeg'
 import './HomeWhatWeDo.css'
 
