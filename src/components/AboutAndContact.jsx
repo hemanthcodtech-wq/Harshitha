@@ -97,7 +97,7 @@ export default function AboutAndContact({ onOpenBooking }) {
                   <div className="contact-icon"><FiMail style={{ color: '#074c3e' }} /></div>
                   <div>
                     <strong>Email:</strong>
-                    <span>support@harshithaenterprises.com</span>
+                    <span>harshithaenterprises91@gmail.com</span>
                   </div>
                 </div>
                 <div className="contact-item">

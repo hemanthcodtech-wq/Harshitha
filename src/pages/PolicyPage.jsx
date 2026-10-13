@@ -166,7 +166,7 @@ export default function PolicyPage({ defaultSlug }) {
                 <p>
                   Please direct all formal inquiries to <strong>Harshitha Enterprises</strong> at{' '}
                   <a href="tel:9900020960">9900020960</a> or via email at{' '}
-                  <a href="mailto:support@harshithaenterprises.com">support@harshithaenterprises.com</a>.
+                  <a href="mailto:harshithaenterprises91@gmail.com">harshithaenterprises91@gmail.com</a>.
                 </p>
                 <div className="signoff-location">
                   Chandigarh, Punjab & Haryana, India

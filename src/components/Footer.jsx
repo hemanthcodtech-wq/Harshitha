@@ -119,7 +119,7 @@ export default function Footer() {
                   <span className="contact-icon"><FiMail style={{ color: '#6ee7b7' }} /></span>
                   <div>
                     <strong>Email:</strong>
-                    <a href="mailto:support@harshithaenterprises.com">support@harshithaenterprises.com</a>
+                    <a href="mailto:harshithaenterprises91@gmail.com">harshithaenterprises91@gmail.com</a>
                   </div>
                 </div>
                 <div className="footer-contact-item">

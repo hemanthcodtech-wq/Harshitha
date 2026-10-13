@@ -187,8 +187,7 @@ export default function ContactPage() {
                 </div>
                 <div className="contact-card-info">
                   <strong>Email Support</strong>
-                  <a href="mailto:support@harshithaenterprises.com">support@harshithaenterprises.com</a>
-                  <a href="mailto:sales@harshithaenterprises.com">sales@harshithaenterprises.com</a>
+                  <a href="mailto:harshithaenterprises91@gmail.com">harshithaenterprises91@gmail.com</a>
                 </div>
               </div>
 
