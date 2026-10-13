@@ -1,0 +1,157 @@
+.installation-process-section {
+  padding: 85px 0 95px;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.process-header-center {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 52px;
+}
+
+.process-header-center .section-pill {
+  display: inline-block;
+  background: #eef7f4;
+  color: #074c3e;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.process-title {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 800;
+  color: #0b2234;
+  letter-spacing: -0.8px;
+  margin: 0 0 12px 0;
+}
+
+.process-subtitle {
+  font-size: 16px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.process-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  position: relative;
+}
+
+.process-steps-grid.is-revealed .process-step-card {
+  animation: processStepStagger 0.55s var(--ease-luxury) both;
+}
+
+.process-steps-grid.is-revealed .process-step-card:nth-child(1) { animation-delay: 0.05s; }
+.process-steps-grid.is-revealed .process-step-card:nth-child(2) { animation-delay: 0.12s; }
+.process-steps-grid.is-revealed .process-step-card:nth-child(3) { animation-delay: 0.19s; }
+.process-steps-grid.is-revealed .process-step-card:nth-child(4) { animation-delay: 0.26s; }
+.process-steps-grid.is-revealed .process-step-card:nth-child(5) { animation-delay: 0.33s; }
+
+@keyframes processStepStagger {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.process-step-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 32px 22px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s var(--ease-luxury), border-color 0.28s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  will-change: transform;
+}
+
+.process-step-card:hover {
+  transform: translateY(-6px);
+  border-color: #074c3e;
+  box-shadow: 0 14px 32px rgba(7, 76, 62, 0.12);
+}
+
+.step-badge-number {
+  position: absolute;
+  top: -14px;
+  width: 32px;
+  height: 32px;
+  background: #074c3e;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 4px 10px rgba(7, 76, 62, 0.3);
+  border: 3px solid #ffffff;
+}
+
+.step-icon-wrapper {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: #eef7f4;
+  color: #074c3e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  transition: all 0.25s ease;
+}
+
+.process-step-card:hover .step-icon-wrapper {
+  background: #074c3e;
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+.step-card-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #0b2234;
+  margin: 0 0 10px 0;
+}
+
+.step-card-desc {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .process-steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .process-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .process-step-card {
+    padding: 28px 20px 22px;
+  }
+}

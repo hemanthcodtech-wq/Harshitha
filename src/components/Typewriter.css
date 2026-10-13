@@ -1,0 +1,64 @@
+.typewriter-container {
+  display: inline-flex;
+  align-items: baseline;
+  position: relative;
+  white-space: pre-wrap;
+}
+
+.typewriter-text {
+  background: linear-gradient(135deg, #074c3e 0%, #0d7862 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+
+/* On dark backgrounds or custom themes */
+.typewriter-light .typewriter-text {
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.typewriter-gold .typewriter-text {
+  background: linear-gradient(135deg, #d49b29 0%, #b88a38 50%, #996e1f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.typewriter-black .typewriter-text {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: #000000 !important;
+  color: #000000 !important;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  font-weight: 300;
+  color: #074c3e;
+  opacity: 1;
+  animation: typewriterCursorBlink 0.9s steps(2, start) infinite;
+  transform: translateY(-1px);
+}
+
+.typewriter-light .typewriter-cursor {
+  color: #ffffff;
+}
+
+.typewriter-gold .typewriter-cursor {
+  color: #d49b29;
+}
+
+.typewriter-black .typewriter-cursor {
+  color: #000000 !important;
+}
+
+@keyframes typewriterCursorBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

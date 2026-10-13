@@ -1,0 +1,749 @@
+:root {
+  --primary-color: #074c3e;
+  --primary-hover: #053b30;
+  --primary-light: #e6f3ef;
+  --primary-gradient: linear-gradient(135deg, #074c3e 0%, #0c6150 100%);
+  --accent-gold: #c59b27;
+  --accent-gold-light: #fef8eb;
+  --text-dark: #0c2333;
+  --text-secondary: #4a5d6e;
+  --text-muted: #788998;
+  --bg-white: #ffffff;
+  --bg-light: #f8fafc;
+  --border-light: #e2e8f0;
+  --card-shadow: 0 16px 36px -8px rgba(12, 35, 51, 0.12), 0 4px 12px rgba(12, 35, 51, 0.05);
+  --header-height: 80px;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-pill: 9999px;
+  --transition-fast: 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  line-height: 1.5;
+  background-color: #ffffff;
+  position: relative;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  padding-top: var(--header-height);
+  border: none;
+  text-align: left;
+  overflow-x: hidden;
+}
+
+@media (max-width: 540px) {
+  #root {
+    padding-top: 70px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  background: none;
+  touch-action: manipulation;
+}
+
+img, video {
+  max-width: 100%;
+}
+
+/* Container Utility */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Global Section Typography Utilities */
+.section-header-center {
+  text-align: center;
+  max-width: 740px;
+  margin: 0 auto 48px;
+}
+
+.section-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #eef7f4;
+  color: #074c3e;
+  font-size: 12.5px;
+  font-weight: 750;
+  padding: 5px 16px;
+  border-radius: 9999px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(26px, 3.4vw, 38px);
+  font-weight: 850;
+  color: #0b2234;
+  letter-spacing: -0.6px;
+  line-height: 1.25;
+  margin: 0 0 12px 0;
+}
+
+.section-desc {
+  font-size: 15.5px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .section-header-center {
+    margin-bottom: 32px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    letter-spacing: -0.4px;
+  }
+
+  .section-desc {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .section-pill {
+    font-size: 11px;
+    padding: 4px 12px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+}
+
+/* ========================================================
+   PREMIUM ANIMATION SYSTEM
+   ======================================================== */
+
+/* Hero Text Slide Up (used in Banner) */
+@keyframes heroTextSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 1. Page Transition Animation */
+.page-transition-wrapper {
+  animation: pageEntranceFade 0.45s var(--ease-luxury) forwards;
+  will-change: opacity, transform;
+  width: 100%;
+}
+
+@keyframes pageEntranceFade {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 2. Scroll Reveal Effects - Ultra Smooth 60FPS Hardware Accelerated */
+.reveal-up {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition: opacity 0.75s var(--ease-luxury), transform 0.75s var(--ease-luxury);
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.reveal-up.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.reveal-fade {
+  opacity: 0;
+  transition: opacity 0.7s var(--ease-luxury);
+  will-change: opacity;
+}
+
+.reveal-fade.is-revealed {
+  opacity: 1;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.97) translate3d(0, 10px, 0);
+  transition: opacity 0.75s var(--ease-luxury), transform 0.75s var(--ease-luxury);
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.reveal-scale.is-revealed {
+  opacity: 1;
+  transform: scale(1) translate3d(0, 0, 0);
+}
+
+/* Reveal from Left on Scroll */
+.reveal-left {
+  opacity: 0;
+  transform: translate3d(-28px, 0, 0);
+  transition: opacity 0.75s var(--ease-luxury), transform 0.75s var(--ease-luxury);
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.reveal-left.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Reveal from Right on Scroll */
+.reveal-right {
+  opacity: 0;
+  transform: translate3d(28px, 0, 0);
+  transition: opacity 0.75s var(--ease-luxury), transform 0.75s var(--ease-luxury);
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.reveal-right.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .reveal-left {
+    transform: translate3d(-14px, 0, 0);
+  }
+  .reveal-right {
+    transform: translate3d(14px, 0, 0);
+  }
+}
+
+/* 3. Staggered Container Animation */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition: opacity 0.65s var(--ease-luxury), transform 0.65s var(--ease-luxury);
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.reveal-stagger.is-revealed > * {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.reveal-stagger.is-revealed > *:nth-child(1) { transition-delay: 0.04s; }
+.reveal-stagger.is-revealed > *:nth-child(2) { transition-delay: 0.10s; }
+.reveal-stagger.is-revealed > *:nth-child(3) { transition-delay: 0.16s; }
+.reveal-stagger.is-revealed > *:nth-child(4) { transition-delay: 0.22s; }
+.reveal-stagger.is-revealed > *:nth-child(5) { transition-delay: 0.28s; }
+.reveal-stagger.is-revealed > *:nth-child(6) { transition-delay: 0.34s; }
+.reveal-stagger.is-revealed > *:nth-child(7) { transition-delay: 0.40s; }
+.reveal-stagger.is-revealed > *:nth-child(8) { transition-delay: 0.46s; }
+.reveal-stagger.is-revealed > *:nth-child(9) { transition-delay: 0.52s; }
+.reveal-stagger.is-revealed > *:nth-child(10) { transition-delay: 0.58s; }
+.reveal-stagger.is-revealed > *:nth-child(11) { transition-delay: 0.64s; }
+.reveal-stagger.is-revealed > *:nth-child(12) { transition-delay: 0.70s; }
+
+/* 4. Global Interactive Elements Micro-Interactions */
+button,
+.btn,
+a.btn-like {
+  transition: transform 0.22s var(--ease-luxury), box-shadow 0.22s ease, background-color 0.22s ease, border-color 0.22s ease, color 0.22s ease;
+}
+
+button:active,
+.btn:active {
+  transform: scale(0.985);
+}
+
+/* Input Focus Smooth Glow */
+input,
+select,
+textarea {
+  transition: border-color 0.22s ease, box-shadow 0.22s ease, background-color 0.22s ease !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #074c3e !important;
+  box-shadow: 0 0 0 3.5px rgba(7, 76, 62, 0.14) !important;
+}
+
+/* Image Zoom Hover Utility */
+.img-zoom-wrapper {
+  overflow: hidden;
+}
+
+.img-zoom-wrapper img {
+  transition: transform 0.5s var(--ease-luxury);
+}
+
+.img-zoom-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* 5. Luxury Light Sweep (Shimmer Sheen) on Premium Buttons */
+.hero-book-btn,
+.video-book-btn,
+.btn-book-survey,
+.cta-book-action-btn,
+.book-submit-btn,
+.sidebar-book-btn,
+.header-cta-btn,
+.about-cta-button,
+.form-send-btn,
+.ribbon-book-btn,
+.btn-primary-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-book-btn::after,
+.video-book-btn::after,
+.btn-book-survey::after,
+.cta-book-action-btn::after,
+.book-submit-btn::after,
+.sidebar-book-btn::after,
+.header-cta-btn::after,
+.about-cta-button::after,
+.form-send-btn::after,
+.ribbon-book-btn::after,
+.btn-primary-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -70%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.hero-book-btn:hover::after,
+.video-book-btn:hover::after,
+.btn-book-survey:hover::after,
+.cta-book-action-btn:hover::after,
+.book-submit-btn:hover::after,
+.sidebar-book-btn:hover::after,
+.header-cta-btn:hover::after,
+.about-cta-button:hover::after,
+.form-send-btn:hover::after,
+.ribbon-book-btn:hover::after,
+.btn-primary-shimmer:hover::after {
+  opacity: 1;
+  animation: shimmerSweep 0.85s var(--ease-luxury) forwards;
+}
+
+@keyframes shimmerSweep {
+  0% {
+    left: -70%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+/* 6. Flip In Animation */
+.reveal-flip {
+  opacity: 0;
+  transform: perspective(600px) rotateX(12deg) translate3d(0, 16px, 0);
+  transition: opacity 0.7s var(--ease-luxury), transform 0.7s var(--ease-luxury);
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.reveal-flip.is-revealed {
+  opacity: 1;
+  transform: perspective(600px) rotateX(0deg) translate3d(0, 0, 0);
+}
+
+/* 7. Blur In Animation */
+.reveal-blur {
+  opacity: 0;
+  filter: blur(8px);
+  transform: translate3d(0, 10px, 0);
+  transition: opacity 0.7s var(--ease-luxury), filter 0.7s var(--ease-luxury), transform 0.7s var(--ease-luxury);
+  will-change: opacity, filter, transform;
+}
+
+.reveal-blur.is-revealed {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translate3d(0, 0, 0);
+}
+
+/* 8. Zoom In Animation */
+.reveal-zoom {
+  opacity: 0;
+  transform: scale(0.88) translate3d(0, 14px, 0);
+  transition: opacity 0.7s var(--ease-luxury), transform 0.7s var(--ease-luxury);
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.reveal-zoom.is-revealed {
+  opacity: 1;
+  transform: scale(1) translate3d(0, 0, 0);
+}
+
+/* 9. Slide Down Animation */
+.reveal-down {
+  opacity: 0;
+  transform: translate3d(0, -22px, 0);
+  transition: opacity 0.7s var(--ease-luxury), transform 0.7s var(--ease-luxury);
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.reveal-down.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* ========================================================
+   GLOBAL MICRO-INTERACTIONS & AMBIENT ANIMATIONS
+   ======================================================== */
+
+/* Card Hover Lift — applied to all major cards */
+.what-service-card,
+.showcase-item-card,
+.service-card-item,
+.gallery-item-card,
+.trust-strip-card,
+.value-item-card,
+.trust-pillar-card,
+.advantage-card-box,
+.timeline-card,
+.process-step-card,
+.testimonial-card-box,
+.contact-card-box,
+.sidebar-card,
+.mv-card,
+.story-stat-box {
+  transition: transform 0.32s var(--ease-luxury), box-shadow 0.32s ease !important;
+}
+
+.what-service-card:hover,
+.showcase-item-card:hover,
+.service-card-item:hover,
+.gallery-item-card:hover,
+.trust-strip-card:hover,
+.value-item-card:hover,
+.trust-pillar-card:hover,
+.advantage-card-box:hover,
+.timeline-card:hover,
+.process-step-card:hover,
+.testimonial-card-box:hover,
+.contact-card-box:hover,
+.sidebar-card:hover,
+.mv-card:hover,
+.story-stat-box:hover {
+  transform: translateY(-6px) scale(1.012);
+  box-shadow: 0 20px 48px -8px rgba(7, 76, 62, 0.14), 0 6px 16px rgba(0,0,0,0.06) !important;
+}
+
+/* Section Pill Entrance Pop */
+.section-pill {
+  animation: pillPop 0.5s var(--ease-luxury) both;
+}
+
+@keyframes pillPop {
+  0% { opacity: 0; transform: scale(0.85) translateY(6px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Floating Ambient Orb — decorative background glow for dark sections */
+.home-advantages-section,
+.home-about-stats-section,
+.installation-process-section,
+.home-testimonials-section,
+.footer-cta-ribbon {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-advantages-section::before,
+.home-about-stats-section::before,
+.installation-process-section::before,
+.home-testimonials-section::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(7, 76, 62, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  animation: orbDrift 18s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+.home-advantages-section::after,
+.home-about-stats-section::after,
+.installation-process-section::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(197, 155, 39, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+  animation: orbDrift 22s ease-in-out infinite alternate-reverse;
+  z-index: 0;
+}
+
+@keyframes orbDrift {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-40px, 30px) scale(1.15); }
+  100% { transform: translate(30px, -20px) scale(0.9); }
+}
+
+/* Ensure section content stays above orbs */
+.home-advantages-section .container,
+.home-about-stats-section .container,
+.installation-process-section .container,
+.home-testimonials-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Icon Bounce on Hover */
+.feature-icon-wrapper,
+.pillar-icon-box,
+.advantage-icon-wrapper,
+.step-icon-wrapper,
+.contact-card-icon,
+.mv-icon-badge,
+.trust-card-icon-box {
+  transition: transform 0.3s var(--ease-luxury) !important;
+}
+
+.feature-item:hover .feature-icon-wrapper,
+.trust-pillar-card:hover .pillar-icon-box,
+.advantage-card-box:hover .advantage-icon-wrapper,
+.process-step-card:hover .step-icon-wrapper,
+.contact-card-box:hover .contact-card-icon,
+.mv-card:hover .mv-icon-badge,
+.trust-strip-card:hover .trust-card-icon-box {
+  transform: scale(1.18) rotate(-4deg);
+}
+
+/* Image Hover Zoom on all cards */
+.showcase-image-wrapper,
+.what-service-media,
+.service-card-image-wrap,
+.gallery-media-wrap,
+.story-image-card {
+  overflow: hidden;
+}
+
+.showcase-image-wrapper img,
+.what-service-media img,
+.service-card-image-wrap img,
+.gallery-media-wrap img,
+.story-image-card img {
+  transition: transform 0.55s var(--ease-luxury) !important;
+}
+
+.showcase-item-card:hover .showcase-image-wrapper img,
+.what-service-card:hover .what-service-media img,
+.service-card-item:hover .service-card-image-wrap img,
+.gallery-item-card:hover .gallery-media-wrap img,
+.story-image-card:hover img {
+  transform: scale(1.06) !important;
+}
+
+/* Pulsing Live Dot (used in video section) */
+@keyframes livePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.4); }
+}
+
+.live-dot {
+  animation: livePulse 1.6s ease-in-out infinite;
+}
+
+/* Step Badge Number Spin on Hover */
+.step-badge-number {
+  transition: transform 0.35s var(--ease-luxury), background 0.35s ease !important;
+}
+
+.process-step-card:hover .step-badge-number {
+  transform: rotate(360deg) scale(1.1);
+  background: #074c3e !important;
+  color: #fff !important;
+}
+
+/* Location Pill Hover */
+.location-pill-item {
+  transition: transform 0.22s var(--ease-luxury), background 0.22s ease, box-shadow 0.22s ease !important;
+}
+
+.location-pill-item:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 12px rgba(7, 76, 62, 0.15) !important;
+}
+
+/* Testimonial card quote fade-in */
+.testimonial-card-box {
+  animation: none;
+}
+
+/* Footer link hover underline sweep */
+.footer-nav-list a {
+  position: relative;
+  transition: color 0.22s ease !important;
+}
+
+.footer-nav-list a::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #6ee7b7;
+  transition: width 0.28s var(--ease-luxury);
+}
+
+.footer-nav-list a:hover::after {
+  width: 100%;
+}
+
+/* Banner feature strip stagger entrance */
+.banner-features-strip .feature-item:nth-child(1) { animation: heroTextSlideUp 0.6s var(--ease-luxury) 0.45s both; }
+.banner-features-strip .feature-item:nth-child(2) { animation: heroTextSlideUp 0.6s var(--ease-luxury) 0.55s both; }
+.banner-features-strip .feature-item:nth-child(3) { animation: heroTextSlideUp 0.6s var(--ease-luxury) 0.65s both; }
+.banner-features-strip .feature-item:nth-child(4) { animation: heroTextSlideUp 0.6s var(--ease-luxury) 0.75s both; }
+
+/* Page hero section entrance */
+.page-hero-section .page-hero-badge,
+.services-hero-banner .services-main-title,
+.projects-hero-banner .page-hero-title,
+.policy-hero-section .policy-hero-title {
+  animation: heroTextSlideUp 0.65s var(--ease-luxury) 0.1s both;
+}
+
+.page-hero-section .page-hero-title {
+  animation: heroTextSlideUp 0.65s var(--ease-luxury) 0.2s both;
+}
+
+.page-hero-section .page-hero-subtitle {
+  animation: heroTextSlideUp 0.65s var(--ease-luxury) 0.32s both;
+}
+
+/* Booking form entrance */
+.booking-form-box,
+.booking-sidebar {
+  animation: heroTextSlideUp 0.7s var(--ease-luxury) 0.15s both;
+}
+
+/* 5. Accessibility: Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-up,
+  .reveal-fade,
+  .reveal-scale,
+  .reveal-left,
+  .reveal-right,
+  .reveal-flip,
+  .reveal-blur,
+  .reveal-zoom,
+  .reveal-down,
+  .reveal-stagger > *,
+  .page-transition-wrapper {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+

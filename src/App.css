@@ -1,0 +1,161 @@
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+/* Floating Action Bar (Especially handy on Mobile) */
+.floating-action-bar {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 990;
+  gap: 12px;
+  animation: floatBarSlideUp 0.4s var(--ease-luxury, cubic-bezier(0.16, 1, 0.3, 1)) both;
+}
+
+@keyframes floatBarSlideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.float-call-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #074c3e;
+  padding: 12px 18px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border: 1.5px solid #074c3e;
+  transition: all 0.25s var(--ease-smooth, cubic-bezier(0.2, 0.8, 0.2, 1));
+  text-decoration: none;
+}
+
+.float-call-btn:hover {
+  background: #eef7f4;
+  transform: translateY(-2px);
+}
+
+.float-call-btn:active {
+  transform: scale(0.97);
+}
+
+.float-book-btn {
+  display: flex;
+  align-items: center;
+  background: #074c3e;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(7, 76, 62, 0.35);
+  transition: all 0.25s var(--ease-smooth, cubic-bezier(0.2, 0.8, 0.2, 1));
+}
+
+.float-book-btn:hover {
+  background: #053b30;
+  transform: translateY(-2px);
+}
+
+.float-book-btn:active {
+  transform: scale(0.97);
+}
+
+/* WhatsApp floating button pulse ring */
+.float-whatsapp-pulse {
+  position: relative;
+  display: inline-flex;
+}
+
+.float-whatsapp-pulse::before,
+.float-whatsapp-pulse::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  border: 2px solid #25D366;
+  opacity: 0;
+  animation: waPulseRing 2.4s ease-out infinite;
+  pointer-events: none;
+}
+
+.float-whatsapp-pulse::after {
+  animation-delay: 1.2s;
+}
+
+@keyframes waPulseRing {
+  0%   { transform: scale(0.9); opacity: 0.7; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
+/* Page exit transition */
+.page-exit {
+  animation: pageExitFade 0.28s var(--ease-luxury, cubic-bezier(0.16, 1, 0.3, 1)) forwards;
+  pointer-events: none;
+}
+
+@keyframes pageExitFade {
+  0%   { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-8px); }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-bottom: 75px;
+  }
+
+  .floating-action-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid #e2e8f0;
+    padding: 10px 16px 12px;
+    z-index: 990;
+    box-shadow: 0 -4px 18px rgba(11, 34, 52, 0.08);
+    gap: 12px;
+  }
+
+  .float-call-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 11px 14px;
+    font-size: 13.5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  .float-book-btn {
+    flex: 1.3;
+    justify-content: center;
+    padding: 11px 16px;
+    font-size: 13.5px;
+  }
+
+  /* Padding at bottom of page to prevent bottom bar overlapping footer */
+  .site-footer {
+    padding-bottom: 90px !important;
+  }
+}

@@ -1,0 +1,110 @@
+/* Luxury Floating Back to Top Button */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(7, 76, 62, 0.2);
+  color: #074c3e;
+  box-shadow: 0 8px 24px rgba(11, 34, 52, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 980;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8) translateY(14px);
+  transition: opacity 0.32s var(--ease-luxury, cubic-bezier(0.16, 1, 0.3, 1)),
+              transform 0.32s var(--ease-luxury, cubic-bezier(0.16, 1, 0.3, 1)),
+              visibility 0.32s,
+              background-color 0.2s ease,
+              border-color 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.back-to-top-btn.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateY(0);
+}
+
+.back-to-top-btn:hover {
+  background: #074c3e;
+  color: #ffffff;
+  border-color: #074c3e;
+  transform: scale(1.08) translateY(-3px);
+  box-shadow: 0 12px 28px rgba(7, 76, 62, 0.3);
+}
+
+.back-to-top-btn:active {
+  transform: scale(0.95);
+}
+
+/* SVG Circular Reading Ring */
+.progress-ring {
+  position: absolute;
+  inset: 0;
+  transform: rotate(-90deg);
+  pointer-events: none;
+}
+
+.progress-ring-track {
+  fill: transparent;
+  stroke: rgba(226, 232, 240, 0.6);
+  stroke-width: 2.5;
+}
+
+.progress-ring-fill {
+  fill: transparent;
+  stroke: #10b981;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+.back-to-top-btn:hover .progress-ring-fill {
+  stroke: #d6b66b;
+}
+
+.arrow-icon-wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s var(--ease-luxury, cubic-bezier(0.16, 1, 0.3, 1));
+}
+
+.back-to-top-btn:hover .arrow-icon-wrap {
+  transform: translateY(-2px);
+}
+
+/* Position adjustment for mobile when floating action bar is shown */
+@media (max-width: 768px) {
+  .back-to-top-btn {
+    bottom: 84px;
+    right: 18px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .progress-ring {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top-btn {
+    transition: none !important;
+  }
+  .arrow-icon-wrap {
+    transition: none !important;
+  }
+}
