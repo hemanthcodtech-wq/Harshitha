@@ -9,6 +9,8 @@ import childBefore from '../assets/child_safety_before.jpg'
 import childAfter from '../assets/child_safety_after.jpg'
 import ductBefore from '../assets/duct_before.jpg'
 import ductAfter from '../assets/duct_after.jpg'
+import clothHangerBefore from '../assets/cloth_hanger_before.jpg'
+import clothHangerAfter from '../assets/cloth_hanger_after.jpg'
 import './BeforeAfterSlider.css'
 
 export const NET_COMPARISONS = [
@@ -37,6 +39,19 @@ export const NET_COMPARISONS = [
     beforeDesc: 'Pigeons perching on railings & AC units, unhealthy droppings and airborne feather allergens.',
     afterDesc: 'UV-stabilized transparent netting seals off balcony ledges while allowing complete sunlight & breeze.',
     serviceSlug: 'pigeon-nets',
+  },
+  {
+    id: 'cloth-hangers',
+    name: 'Ceiling Cloth Hangers & Dryers',
+    badge: 'Rust-Proof SS-304 / SS-316',
+    tagline: 'Reclaim 100% Balcony Floor Space with Pulley System',
+    beforeImg: clothHangerBefore,
+    afterImg: clothHangerAfter,
+    beforeLabel: 'Before: Cluttered Floor Drying Rack',
+    afterLabel: 'After: Space-Saving Ceiling Hangers',
+    beforeDesc: 'Bulky floor stand blocks walkway, tips over in winds, and leaves balcony cramped and untidy.',
+    afterDesc: 'Heavy-duty ceiling pulley system raises wet clothes overhead, maximizing warm airflow & open floor area.',
+    serviceSlug: 'cloth-hangers',
   },
   {
     id: 'child-safety',

@@ -145,6 +145,27 @@
   flex: 1;
 }
 
+.same-day-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  color: #166534;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  margin-bottom: 10px;
+  width: fit-content;
+  box-shadow: 0 2px 8px rgba(22, 101, 52, 0.15);
+  animation: pulseBadge 2s ease-in-out infinite;
+}
+
+@keyframes pulseBadge {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
 .what-service-title {
   font-size: 24px;
   font-weight: 850;

@@ -121,7 +121,7 @@ function AppContent() {
               className="float-book-btn"
               aria-label="Book a free site inspection"
             >
-              <span>Book Free Visit</span>
+              <span>Whatsapp</span>
             </Link>
           </span>
         </div>

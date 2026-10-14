@@ -32,6 +32,10 @@ export default function HomeLocations() {
     'Dhakoli, Zirakpur',
     'Kharar & Sunny Enclave',
     'New Chandigarh (Omaxe)',
+    'New Chandigarh (Mullanpur)',
+    'Ludhiana City Center',
+    'Ludhiana Sarabha Nagar',
+    'Ludhiana Model Town',
     'Dera Bassi Complexes',
   ]
 

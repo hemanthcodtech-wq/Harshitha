@@ -83,6 +83,10 @@ export default function ServicesPage({ onOpenBooking }) {
 
                   {/* Card Content */}
                   <div className="service-card-body">
+                    <div className="service-sameday-badge">
+                      <FiCheckCircle size={11} />
+                      <span>Same-Day Installation</span>
+                    </div>
                     <div className="service-card-text">
                       <h2 className="service-card-title">{service.shortTitle}</h2>
                       <p className="service-card-desc">{service.shortDesc}</p>

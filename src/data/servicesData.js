@@ -20,6 +20,10 @@ export const servicesData = [
       'They are highly recommended for children safety and pet fall protection in multi-story apartments and villas, offering an elegant structural appearance.',
     highlights: [
       {
+        title: '⚡ Same-Day Installation',
+        desc: 'Most balcony installations completed within 2-4 hours on the same day of site visit.',
+      },
+      {
         title: 'Child & Pet Safety',
         desc: 'Prevents accidental falls with high-tension marine-grade structural cables.',
       },
@@ -136,6 +140,10 @@ export const servicesData = [
       'Installed with stainless steel perimeter anchors and high-tension border ropes, ensuring zero sagging and maximum impact resistance for 10+ years.',
     highlights: [
       {
+        title: '⚡ Same-Day Installation',
+        desc: 'Quick professional installation completed within 1-2 hours with minimal disruption.',
+      },
+      {
         title: 'Child Fall Prevention',
         desc: 'Withstands high impacts of 250kg+ dynamic drop loads tested for active toddlers.',
       },
@@ -239,6 +247,10 @@ export const servicesData = [
       'Engineered with specialized thin-filament high-tensile polymer, these nets are virtually undetectable from ground level, preserving your building architectural beauty.',
     highlights: [
       {
+        title: '⚡ Same-Day Installation',
+        desc: 'Fast balcony and AC net installation completed within 1-2 hours.',
+      },
+      {
         title: '100% Bird Proofing',
         desc: 'Permanent humane exclusion preventing nesting, egg hatching, and roosting.',
       },
@@ -336,6 +348,10 @@ export const servicesData = [
     subOverview:
       'Built using heavy-duty SS304/SS316 stainless steel rods that support thick laundry loads without bending, operated with smooth pulley string mechanics.',
     highlights: [
+      {
+        title: '⚡ Same-Day Installation',
+        desc: 'Complete installation done within 1-2 hours for manual, 2-3 hours for smart dryers.',
+      },
       {
         title: 'Space Saving Design',
         desc: 'Lifts laundry to the ceiling, releasing critical floor space for relaxing.',
@@ -444,6 +460,10 @@ export const servicesData = [
       'We fabricate complete turn-key solutions including galvanized steel pipe frames, tension wire rigging, and specialized rooftop cages.',
     highlights: [
       {
+        title: '⚡ Quick Turnaround',
+        desc: 'Standard pitch installations completed within 1 day, fast deployment for societies.',
+      },
+      {
         title: 'High Velocity Impact Absorption',
         desc: 'Engineered to withstand heavy leather cricket ball shots up to 150 km/h.',
       },
@@ -533,6 +553,10 @@ export const servicesData = [
       'Compliant with Indian Standards (IS: 5175) and international safety norms, tested for rigorous dynamic drop impact loads.',
     highlights: [
       {
+        title: '⚡ Rapid Deployment',
+        desc: 'Quick site setup for scaffolding bays and building rig installations.',
+      },
+      {
         title: 'Personnel Fall Arrest',
         desc: 'Tested to arrest falls of construction workers from heights up to 6 meters.',
       },
@@ -610,6 +634,10 @@ export const servicesData = [
       'Provides a clean, professional aesthetic to active work zones while shielding workers from extreme sun exposure and wind gusts.',
     highlights: [
       {
+        title: '⚡ Fast Society Setup',
+        desc: 'Complete facade wrapping for standard societies completed in 1-2 days.',
+      },
+      {
         title: 'Dust & Paint Containment',
         desc: 'Traps 80%+ of airborne cement dust and paint spray within the scaffold zone.',
       },
@@ -682,6 +710,10 @@ export const servicesData = [
     subOverview:
       'Harshitha Enterprises uses specialized industrial rope-access technicians to seal entire vertical duct shafts from roof level to ground floor, permanently securing your society hygiene.',
     highlights: [
+      {
+        title: '⚡ Quick Rope Access Setup',
+        desc: 'Standard shaft sealing completed within 1 day by certified riggers.',
+      },
       {
         title: 'Full Shaft Hygiene Seal',
         desc: 'Permanently stops birds from nesting and dying inside inaccessible plumbing shafts.',

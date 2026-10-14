@@ -200,29 +200,10 @@
   }
 }
 
-/* Mobile responsive adjustments */
+/* Mobile responsive adjustments - Hide on mobile */
 @media (max-width: 768px) {
   .quick-float-wrapper {
-    bottom: 84px;
-    right: 74px;
-    gap: 10px;
-  }
-
-  .quick-float-btn {
-    width: 44px;
-    height: 44px;
-  }
-
-  .call-icon {
-    font-size: 19px;
-  }
-
-  .wa-icon {
-    font-size: 22px;
-  }
-
-  .quick-float-tooltip {
-    display: none;
+    display: none !important;
   }
 }
 

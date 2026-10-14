@@ -205,6 +205,10 @@ export default function HomeWhatWeDo({ onOpenBooking }) {
               </div>
 
               <div className="what-service-body">
+                <div className="same-day-badge">
+                  <FiClock size={12} />
+                  <span>Same-Day Installation</span>
+                </div>
                 <h3 className="what-service-title">{item.title}</h3>
                 <p className="what-service-desc">{item.desc}</p>
 
