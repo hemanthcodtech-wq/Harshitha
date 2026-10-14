@@ -101,7 +101,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!assets/).*)",
+      "source": "/:path*",
       "destination": "/index.html"
     }
   ],
@@ -122,17 +122,5 @@
       "maxDuration": 30
     }
   },
-  "regions": ["bom1"],
-  "cache": [
-    {
-      "path": "node_modules/**",
-      "ext": ["node"],
-      "strategy": "dependency"
-    },
-    {
-      "path": "dist/assets/**",
-      "ext": ["js", "css", "svg", "woff2", "png", "jpg", "jpeg", "gif", "webp"],
-      "strategy": "asset"
-    }
-  ]
+  "regions": ["bom1"]
 }
