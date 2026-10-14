@@ -117,10 +117,5 @@
       "permanent": true
     }
   ],
-  "functions": {
-    "app/**/*.js": {
-      "maxDuration": 30
-    }
-  },
   "regions": ["bom1"]
 }
