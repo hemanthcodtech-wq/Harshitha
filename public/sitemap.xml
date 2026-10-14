@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.harshithaenterprise.com/</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.harshithaenterprise.com/og-image.jpg</image:loc>
+      <image:title>Harshitha Enterprises - Invisible Grills & Safety Nets</image:title>
+    </image:image>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://www.harshithaenterprise.com/about</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Services Page -->
+  <url>
+    <loc>https://www.harshithaenterprise.com/services</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service Detail Pages -->
+  <url>
+    <loc>https://www.harshithaenterprise.com/services/invisible-grills</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.harshithaenterprise.com/images/invisible-grills.jpg</image:loc>
+      <image:title>Premium Invisible Safety Grills - SS316 Marine Grade</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.harshithaenterprise.com/services/safety-nets</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.harshithaenterprise.com/images/child-safety-nets.jpg</image:loc>
+      <image:title>Children & Family Balcony Safety Nets</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.harshithaenterprise.com/services/pigeon-nets</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.harshithaenterprise.com/images/pigeon-nets.jpg</image:loc>
+      <image:title>Pigeon & Bird Safety Nets - Humane Bird Exclusion</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.harshithaenterprise.com/services/cloth-hangers</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.harshithaenterprise.com/images/cloth-hangers.jpg</image:loc>
+      <image:title>Stainless Steel Cloth Hangers & Smart Dryers</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.harshithaenterprise.com/services/sports-nets</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.harshithaenterprise.com/images/sports-nets.jpg</image:loc>
+      <image:title>Sports & Cricket Practice Net Enclosures</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.harshithaenterprise.com/services/construction-nets</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.harshithaenterprise.com/images/construction-nets.jpg</image:loc>
+      <image:title>Construction & Fall Protection Safety Nets</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.harshithaenterprise.com/services/building-covering-nets</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://www.harshithaenterprise.com/images/building-covering-nets.jpg</image:loc>
+      <image:title>Building Covering & Facade Renovation Nets</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.harshithaenterprise.com/services/duct-nets</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://www.harshithaenterprise.com/images/duct-nets.jpg</image:loc>
+      <image:title>Building Duct Area & Plumbing Shaft Safety Nets</image:title>
+    </image:image>
+  </url>
+
+  <!-- Projects Page -->
+  <url>
+    <loc>https://www.harshithaenterprise.com/projects</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.harshithaenterprise.com/images/projects-gallery.jpg</image:loc>
+      <image:title>Recent Installation Projects - Gallery</image:title>
+    </image:image>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://www.harshithaenterprise.com/contact</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Book Page -->
+  <url>
+    <loc>https://www.harshithaenterprise.com/book</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Policy Pages -->
+  <url>
+    <loc>https://www.harshithaenterprise.com/privacy-policy</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.harshithaenterprise.com/terms-conditions</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.harshithaenterprise.com/cancellation-refund-policy</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.harshithaenterprise.com/shipping-delivery-policy</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.harshithaenterprise.com/warranty-policy</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.harshithaenterprise.com/disclaimer</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.harshithaenterprise.com/cookie-policy</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

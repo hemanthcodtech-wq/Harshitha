@@ -1,0 +1,48 @@
+# Robots.txt for Harshitha Enterprises
+# https://www.harshithaenterprise.com/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.harshithaenterprise.com/sitemap.xml
+
+# Crawl-delay (optional - remove if not needed)
+Crawl-delay: 10
+
+# Disallow admin/private directories (if any)
+Disallow: /api/
+Disallow: /private/
+Disallow: /checkout/
+Disallow: /cart/
+
+# Host preference
+Host: https://www.harshithaenterprise.com
+
+# Additional instructions for specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Pinterestbot
+Allow: /

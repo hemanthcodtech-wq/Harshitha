@@ -1,0 +1,157 @@
+# Harshitha Enterprises - SEO Optimized .htaccess
+# =============================================
+
+# Force HTTPS (uncomment if SSL certificate is installed)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# www to non-www redirect (choose one)
+# RewriteEngine On
+# RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove trailing slashes
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Remove index.html from URLs
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^index\.html$ / [L,R=301]
+
+# Enable Gzip Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml application/xml+rss
+</IfModule>
+
+# Browser Caching (Expires headers)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # Images
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  
+  # Video
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType video/mpeg "access plus 1 year"
+  ExpiresByType video/quicktime "access plus 1 year"
+  
+  # CSS, JavaScript
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType application/x-javascript "access plus 1 month"
+  
+  # Fonts
+  ExpiresByType application/x-font-ttf "access plus 1 year"
+  ExpiresByType application/x-font-woff "access plus 1 year"
+  ExpiresByType application/x-font-woff2 "access plus 1 year"
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  
+  # HTML
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# Cache-Control Headers
+<IfModule mod_headers.c>
+  <FilesMatch "\.(jpg|jpeg|png|gif|ico|css|js|webp|svg|woff|woff2|ttf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# Remove ETag
+FileETag None
+
+# Custom Error Pages
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# MIME Types
+AddType image/x-icon .ico
+AddType image/svg+xml .svg
+
+# Disable directory browsing
+Options -Indexes
+
+# Block access to hidden files
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Block access to specific files
+<FilesMatch "\.(env|log|ini|config|sql|json|md|yml|yaml)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# SEO: Prevent duplicate content
+<IfModule mod_rewrite.c>
+  RewriteCond %{THE_REQUEST} /+(?:index|home)\.html?\s [NC]
+  RewriteRule ^ / [R=301,L,NC]
+  
+  # Remove double slashes
+  RewriteCond %{REQUEST_URI} ^(.*)//(.*)$
+  RewriteRule ^ %1%2 [L,R=301]
+  
+  # Remove query string from canonical URLs (optional)
+  # RewriteCond %{QUERY_STRING} ^$
+  # RewriteRule ^(.*)$ /$1? [L,R=301]
+</IfModule>
+
+# Gzip Compression (alternative method)
+<IfModule mod_gzip.c>
+  mod_gzip_on Yes
+  mod_gzip_dechunk Yes
+  mod_gzip_item_include file \.(html?|txt|css|js|php|pl)$
+  mod_gzip_item_include handler ^cgi-script$
+  mod_gzip_item_include mime ^text/.*
+  mod_gzip_item_include mime ^application/x-javascript.*
+  mod_gzip_item_include mime ^application/javascript.*
+  mod_gzip_item_exclude mime ^image/.*
+</IfModule>
+
+# Enable HTTP/2 (if supported by server)
+<IfModule mod_http2.c>
+  Protocols h2 http/1.1
+</IfModule>
+
+# PHP Settings (adjust as needed)
+<IfModule php_module>
+  php_value upload_max_filesize 64M
+  php_value post_max_size 64M
+  php_value max_execution_time 300
+  php_value max_input_time 300
+</IfModule>
+
+# WordPress-like URL structure support (if using React Router)
+<IfModule mod_rewrite.c>
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /index.html [L]
+</IfModule>
