@@ -29,7 +29,7 @@ export const installationSteps = [
   {
     step: '5',
     title: 'Quality Check',
-    desc: 'Final load test on wire tension and functionality demo, followed by handover of your 5-year warranty card.',
+    desc: 'Final load test on wire tension and functionality demo, followed by handover of your 15-year warranty card.',
     icon: <FiCheckCircle />,
   },
 ]

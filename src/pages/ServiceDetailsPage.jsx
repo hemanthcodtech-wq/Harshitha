@@ -111,7 +111,7 @@ export default function ServiceDetailsPage({ onOpenBooking }) {
               <div className="visual-image-wrapper">
                 <img src={service.image} alt={service.title} className="visual-hero-img" />
                 <div className="visual-badge-overlay">
-                  <strong>5-Year Warranty</strong>
+                  <strong>15-Year Warranty</strong>
                   <span>Genuine Certified Material</span>
                 </div>
               </div>

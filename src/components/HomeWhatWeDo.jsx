@@ -62,7 +62,7 @@ export default function HomeWhatWeDo({ onOpenBooking }) {
       features: [
         '100% Virgin Garware Nylon',
         'Withstands 250kg+ Drop Load',
-        'UV Heat Stabilized (5+ Years)',
+        'UV Heat Stabilized (15+ Years)',
         'Soft-Touch Non-Abrasive',
         'Zero Cage Feeling (92% Light)',
         'Stainless Steel Eye-Bolts',
