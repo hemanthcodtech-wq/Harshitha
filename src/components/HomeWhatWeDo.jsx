@@ -101,7 +101,7 @@ export default function HomeWhatWeDo({ onOpenBooking }) {
         'Eliminates Foul Rot Odors',
         'Preserves Plumbing Ventilation',
         'High-Tensile Wire Core Border',
-        '5 Years Society Warranty',
+        '5+ Years Society Warranty',
       ],
     },
     {

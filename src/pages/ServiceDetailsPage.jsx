@@ -60,8 +60,8 @@ export default function ServiceDetailsPage({ onOpenBooking }) {
                   <Typewriter
                     text={
                       service.id === 'invisible-grills'
-                        ? 'Marine SS-316 • 5-Yr Warranty'
-                        : 'Certified Quality • 5-Yr Warranty'
+                        ? 'Marine SS-316 • 15+ Years Service Life'
+                        : 'Certified Quality'
                     }
                     loop={false}
                     typingSpeed={50}
@@ -111,7 +111,7 @@ export default function ServiceDetailsPage({ onOpenBooking }) {
               <div className="visual-image-wrapper">
                 <img src={service.image} alt={service.title} className="visual-hero-img" />
                 <div className="visual-badge-overlay">
-                  <strong>15-Year Warranty</strong>
+                  <strong>{service.installationAndCare.warranty}</strong>
                   <span>Genuine Certified Material</span>
                 </div>
               </div>

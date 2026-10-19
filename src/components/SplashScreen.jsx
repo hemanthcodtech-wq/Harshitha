@@ -159,7 +159,7 @@ export default function SplashScreen({ onFinish, isStandalone = false }) {
               </span>
               <span className="desktop-highlight-pill">
                 <FiCheckCircle size={12} style={{ color: '#064E3B', marginRight: '5px' }} />
-                10-Year Warranty
+                5+ Years Warranty
               </span>
               <span className="desktop-highlight-pill">
                 <FiGrid size={12} style={{ color: '#064E3B', marginRight: '5px' }} />

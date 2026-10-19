@@ -130,13 +130,13 @@ export default function AboutPage({ onOpenBooking }) {
       phase: 'Market Leader',
       title: '13+ Years of Leadership & Excellence',
       subtitle: 'Tricity’s #1 Most Recommended Safety Team',
-      desc: 'Today, Harshitha Enterprises protects over 15,000+ residences and commercial complexes across Chandigarh Tricity and neighboring regions. Backed by authentic SS-316 certification, 5-year written warranties, and top customer ratings.',
+      desc: 'Today, Harshitha Enterprises protects over 15,000+ residences and commercial complexes across Chandigarh Tricity and neighboring regions. Backed by authentic SS-316 certification, 5+ year written warranties, and top customer ratings.',
       badge: '15,000+ Protected Homes',
       metric: '100% Quality & 0 Failures',
       icon: <FiAward size={18} />,
       accentColor: '#074c3e',
       isCurrent: true,
-      highlights: ['15,000+ satisfied clients', '5-Year written warranty', 'Free on-site inspection']
+      highlights: ['15,000+ satisfied clients', '5+ Year written warranty', 'Free on-site inspection']
     },
   ]
 
@@ -235,7 +235,7 @@ export default function AboutPage({ onOpenBooking }) {
                   <p>Years Experience</p>
                 </div>
                 <div className="story-stat-box">
-                  <h3><AnimatedCounter value="5 Years" /></h3>
+                  <h3><AnimatedCounter value="5+ Years" /></h3>
                   <p>Written Warranty</p>
                 </div>
                 <div className="story-stat-box">

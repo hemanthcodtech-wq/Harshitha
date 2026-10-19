@@ -65,7 +65,7 @@ export const servicesData = [
     installationAndCare: {
       time: 'Window (1-2 Hours), Balcony (2-4 Hours), Commercial projects (1-2 Days).',
       maintenance: 'Highly low-maintenance. Wipe occasionally with a microfibre cloth to remove atmospheric dust.',
-      warranty: '5 Years Official Written Warranty Card Included.',
+      warranty: '5+ Years Official Written Warranty Card Included.',
     },
     comparison: {
       title: 'Invisible Grills vs Traditional Iron Grills',
@@ -187,7 +187,7 @@ export const servicesData = [
     installationAndCare: {
       time: 'Balcony (1-2 Hours), Staircase Well (2-4 Hours).',
       maintenance: 'Completely washable. Dust washes away with rain or simple hose spray.',
-      warranty: '5 Years Replacement Warranty on Mesh & Rigging.',
+      warranty: '5+ Years Replacement Warranty on Mesh & Rigging.',
     },
     comparison: {
       title: 'Harshitha Virgin Nylon Nets vs Generic Local Nets',
@@ -198,7 +198,7 @@ export const servicesData = [
         ['UV Resistance', 'Factory UV-Stabilized for 10+ years', 'Becomes brittle & breaks in 6-8 months'],
         ['Load Rating', 'Tested for 250kg+ impact', 'Snaps under minor human weight'],
         ['Fasteners', 'Rust-proof SS eyebolts & wire anchors', 'Cheap iron nails that rust & loosen'],
-        ['Warranty', '5-Year Written Card', 'No warranty or after-sales service'],
+        ['Warranty', '5+ Year Written Card', 'No warranty or after-sales service'],
       ],
     },
     models: [
@@ -290,7 +290,7 @@ export const servicesData = [
     installationAndCare: {
       time: 'Balcony (1-2 Hours), AC Unit (30-45 Mins).',
       maintenance: 'Zero maintenance. Self-draining mesh does not trap dust or rain.',
-      warranty: '5 Years Replacement Warranty against sagging or tearing.',
+      warranty: '5+ Years Replacement Warranty against sagging or tearing.',
     },
     comparison: {
       title: 'Garware Bird Nets vs Bird Spikes & Traditional Wire Mesh',
@@ -747,7 +747,7 @@ export const servicesData = [
     installationAndCare: {
       time: 'Standard 4-to-10 Floor Shaft (1 Day), Society Mega Complex (2-4 Days).',
       maintenance: 'Zero maintenance required after installation.',
-      warranty: '5 Years Society Written Warranty.',
+      warranty: '5+ Years Society Written Warranty.',
     },
     comparison: {
       title: 'Shaft Netting vs Leaving Duct Areas Open',

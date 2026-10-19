@@ -20,7 +20,7 @@ export default function ServicesOverview({ onOpenBooking }) {
       desc: 'Durable copolymer nylon nets that keep pigeons and birds away from your balconies and ducts without harming them.',
       img: pigeonImg,
       badge: 'UV Stabilized',
-      features: ['Garware Best Quality', 'Non-obstructive', '5 Years Warranty'],
+      features: ['Garware Best Quality', 'Non-obstructive', '5+ Years Warranty'],
     },
     {
       id: 'sports-nets',
