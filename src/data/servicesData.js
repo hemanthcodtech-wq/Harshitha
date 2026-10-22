@@ -65,7 +65,7 @@ export const servicesData = [
     installationAndCare: {
       time: 'Window (1-2 Hours), Balcony (2-4 Hours), Commercial projects (1-2 Days).',
       maintenance: 'Highly low-maintenance. Wipe occasionally with a microfibre cloth to remove atmospheric dust.',
-      warranty: '5+ Years Official Written Warranty Card Included.',
+      warranty: '15 Years Official Written Warranty Card Included.',
     },
     comparison: {
       title: 'Invisible Grills vs Traditional Iron Grills',
@@ -78,6 +78,7 @@ export const servicesData = [
         ['Maintenance', 'Zero Maintenance (Wipe clean)', 'Requires regular scraping & painting'],
         ['Ventilation', '100% Unobstructed natural airflow', 'Thick iron rods obstruct air passage'],
         ['Structural Weight', 'Extremely lightweight, safe frames', 'Heavy iron weight loads balcony slab'],
+        ['Warranty', '15 Years Written Warranty Card', 'No warranty or short term'],
         ['Emergency Exit', 'Swiftly cuttable with wire shears', 'Traps occupants during fire breakouts'],
       ],
     },

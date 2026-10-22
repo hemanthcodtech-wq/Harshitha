@@ -344,7 +344,7 @@ export default function BookPage() {
                   Over 15,000 satisfied installations across Chandigarh, Mohali & Panchkula with 100% safety record.
                 </p>
                 <div className="trust-highlights">
-                  <span>✓ 5+ Years Warranty</span>
+                  <span>✓ 5 to 15 Yrs Warranty</span>
                   <span>✓ Marine Grade SS-316</span>
                   <span>✓ Insured Riggers</span>
                 </div>

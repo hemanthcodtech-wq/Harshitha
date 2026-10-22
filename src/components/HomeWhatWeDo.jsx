@@ -25,7 +25,7 @@ export default function HomeWhatWeDo({ onOpenBooking }) {
       link: '/services/invisible-grills',
       features: [
         'SS316 Marine Grade Steel',
-        '2mm to 3mm Cable Width',
+        '15 Years Written Warranty',
         'Rust & Corrosion Resistant',
         'UV-Resistant Nylon Coat',
         'Child & Pet Safety',

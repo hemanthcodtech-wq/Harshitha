@@ -10,7 +10,7 @@ export const SEO_CONFIG = {
   },
   about: {
     title: 'About Us | Harshitha Enterprises - 13+ Years of Safety Excellence in Chandigarh',
-    description: 'Learn about Harshitha Enterprises, Chandigarh\'s trusted safety solutions provider since 2013. We specialize in Invisible Grills, Balcony Safety Nets, and Bird Nets with 15,000+ successful installations and 5+ year warranties.',
+    description: 'Learn about Harshitha Enterprises, Chandigarh\'s trusted safety solutions provider since 2013. We specialize in Invisible Grills, Balcony Safety Nets, and Bird Nets with 15,000+ successful installations and 5 to 15 year written warranties.',
     keywords: 'about harshitha enterprises, invisible grills chandigarh, safety nets company, bird nets providers, 13 years experience, SS-316 marine grade, certified riggers',
     url: 'https://www.harshithaenterprise.com/about'
   },

@@ -44,7 +44,7 @@ export default function ContactPage() {
     },
     {
       q: 'Do you provide an official written warranty card?',
-      a: 'Yes, we provide an official 5+ year written warranty card covering genuine SS-316 marine-grade cables, stainless steel turnbuckles, aluminum track anchors, and UV-stabilized nylon netting against rust, sagging, or manufacturer defects.',
+      a: 'Yes, we provide an official written warranty card with 5 years warranty for safety nets and 15 years warranty for all types of invisible grills, covering genuine SS-316 marine-grade cables, stainless steel turnbuckles, aluminum track anchors, and UV-stabilized nylon netting against rust, sagging, or manufacturer defects.',
     },
     {
       q: 'What materials are used for pigeon and bird safety nets?',

@@ -137,7 +137,7 @@ export default function ServicesPage({ onOpenBooking }) {
               <span className="quality-pill">Certified Standards</span>
               <h2>Why Harshitha Net Solutions Lead the Industry</h2>
               <p>
-                We use 100% genuine SS-316 marine-grade cables and Garware UV-stabilized copolymer nylon. With 13+ years of experience, our certified rigging technicians deliver zero-sag, life-safety certified installations backed by 5+ year written warranties.
+                We use 100% genuine SS-316 marine-grade cables and Garware UV-stabilized copolymer nylon. With 13+ years of experience, our certified rigging technicians deliver zero-sag, life-safety certified installations backed by written warranties — 5 years for safety nets and 15 years for all invisible grills.
               </p>
             </div>
 
