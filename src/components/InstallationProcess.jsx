@@ -29,7 +29,7 @@ export const installationSteps = [
   {
     step: '5',
     title: 'Quality Check',
-    desc: 'Final load test on wire tension and functionality demo, followed by handover of your official written warranty card (5 years for safety nets, 15 years for grills).',
+    desc: 'Final load test on wire tension and functionality demo, followed by handover of your official written warranty card (5 years for safety nets, 10 years for grills).',
     icon: <FiCheckCircle />,
   },
 ]

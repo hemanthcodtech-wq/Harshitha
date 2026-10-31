@@ -478,7 +478,7 @@ export const POLICIES = {
         title: 'Warranty Periods by Product',
         content: [
           'Harshitha Enterprises provides official written warranty cards for installed solutions with the following standard coverage durations:',
-          '• Invisible Safety Grills (All Types & Profiles): 15 Years Written Warranty covering genuine SS-316 marine-grade cables, aluminum track frames, and tension anchors against rust and structural failure.',
+          '• Invisible Safety Grills (All Types & Profiles): 10 Years Written Warranty covering genuine SS-316 marine-grade cables, aluminum track frames, and tension anchors against rust and structural failure.',
           '• Balcony Safety Nets & Anti-Bird Nets: 5 Years Replacement Warranty on UV-stabilized copolymer nylon mesh and perimeter rigging hardware against degradation, tearing, or sagging.',
           '• Sports Enclosure Nets: 3 Years Warranty on mesh and structural rigging.',
           '• Ceiling Cloth Hangers: 2 Years Comprehensive Warranty on pulley systems, cords, and stainless steel rods.',

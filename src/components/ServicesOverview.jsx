@@ -12,7 +12,7 @@ export default function ServicesOverview({ onOpenBooking }) {
       desc: 'High-tensile 316 marine-grade stainless steel cables providing unblocked panoramic views with maximum safety for children and pets.',
       img: bannerImg,
       badge: 'Most Popular',
-      features: ['Rust Proof SS-316', 'Transparent View', '15 Years Warranty'],
+      features: ['Rust Proof SS-316', 'Transparent View', '10 Years Warranty'],
     },
     {
       id: 'pigeon-nets',

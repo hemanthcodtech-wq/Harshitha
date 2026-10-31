@@ -60,12 +60,12 @@ export const servicesData = [
       { label: 'Corrosion Endurance', value: '1,000+ Hours ASTM B117 Neutral Salt Spray Tested (Zero Rust)' },
       { label: 'Optical Visibility', value: '98% Unrestricted Panoramic Outdoor View' },
       { label: 'Emergency Evacuation', value: 'Swiftly Cuttable with Standard Cable Cutters in < 10 Seconds' },
-      { label: 'Lifespan & Maintenance', value: '15+ Years Service Life (Zero Painting or Scraping)' },
+      { label: 'Lifespan & Maintenance', value: '10+ Years Service Life (Zero Painting or Scraping)' },
     ],
     installationAndCare: {
       time: 'Window (1-2 Hours), Balcony (2-4 Hours), Commercial projects (1-2 Days).',
       maintenance: 'Highly low-maintenance. Wipe occasionally with a microfibre cloth to remove atmospheric dust.',
-      warranty: '15 Years Official Written Warranty Card Included.',
+      warranty: '10 Years Official Written Warranty Card Included.',
     },
     comparison: {
       title: 'Invisible Grills vs Traditional Iron Grills',
@@ -78,7 +78,7 @@ export const servicesData = [
         ['Maintenance', 'Zero Maintenance (Wipe clean)', 'Requires regular scraping & painting'],
         ['Ventilation', '100% Unobstructed natural airflow', 'Thick iron rods obstruct air passage'],
         ['Structural Weight', 'Extremely lightweight, safe frames', 'Heavy iron weight loads balcony slab'],
-        ['Warranty', '15 Years Written Warranty Card', 'No warranty or short term'],
+        ['Warranty', '10 Years Written Warranty Card', 'No warranty or short term'],
         ['Emergency Exit', 'Swiftly cuttable with wire shears', 'Traps occupants during fire breakouts'],
       ],
     },

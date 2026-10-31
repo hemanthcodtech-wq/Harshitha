@@ -60,7 +60,7 @@ export default function ServiceDetailsPage({ onOpenBooking }) {
                   <Typewriter
                     text={
                       service.id === 'invisible-grills'
-                        ? 'Marine SS-316 • 15+ Years Service Life'
+                        ? 'Marine SS-316 • 10+ Years Service Life'
                         : 'Certified Quality'
                     }
                     loop={false}

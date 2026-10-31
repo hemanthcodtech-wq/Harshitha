@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
 import { useState, useEffect, useRef } from 'react'
+import { BsWhatsapp } from 'react-icons/bs'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
@@ -116,13 +117,16 @@ function AppContent() {
           </a>
 
           <span className="float-whatsapp-pulse">
-            <Link
-              to="/book"
+            <a
+              href={`https://wa.me/919900020960?text=${encodeURIComponent('Hello Harshitha Enterprises, I would like to inquire about your balcony safety nets, invisible grills, and installation services.')}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="float-book-btn"
-              aria-label="Book a free site inspection"
+              aria-label="Chat with Harshitha Enterprises on WhatsApp"
             >
-              <span>Whatsapp</span>
-            </Link>
+              <BsWhatsapp size={17} style={{ marginRight: '6px' }} />
+              <span>WhatsApp</span>
+            </a>
           </span>
         </div>
       )}
